@@ -12,13 +12,13 @@ const initialValues = {
 
 const ContactsSchema = Yup.object().shape({
   name: Yup.string()
-    .min(3, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
+    .min(3, "This field must contain at least 3 characters!")
+    .max(50, "This field must contain no more than 50 characters!")
+    .required("This field is required."),
   number: Yup.string()
-    .min(3, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
+    .min(3, "This field must contain at least 3 characters!")
+    .max(50, "This field must contain no more than 50 characters!")
+    .required("This field is required."),
 });
 
 const ContactForm = ({ onAddContact }) => {
